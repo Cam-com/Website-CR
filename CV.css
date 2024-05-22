@@ -1,0 +1,125 @@
+/*I'll need fixed box positions
+Define the position of the parent element properly
+then the position of the child element appropriately
+
+Use calculations of % for the size of each box according to parent
+And do the same for the font size according to box
+
+Make sure to put margins at 0 when they are not needed for all elements involved
+
+Use float for the integration of images into the text
+
+*/
+
+* { 
+    margin: 0 ; 
+    padding: 0 ; 
+} 
+
+body{
+    margin-top:0px;
+}
+
+.CV{
+    z-index:2;
+    position: fixed;
+    color: rgb(21, 32, 43);
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 8px;
+    letter-spacing: 0px;
+    word-spacing: 0.06px;
+    font-weight: 550;
+}
+
+table{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td{
+    padding: 10px;
+}
+
+
+.CV p{
+    font-size: 8px;
+    letter-spacing: 0px;
+    word-spacing: 0.06px;
+    font-weight: 550;
+
+}
+
+.CV h1{
+    font-size: 14px;
+    letter-spacing: 0px;
+    word-spacing: 0.06px;
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+
+.CV h2{
+    font-size: 10px;
+    letter-spacing: 0px;
+    word-spacing: 0.06px;
+    font-weight: 600;
+    padding-top:5px;
+    display: inline;
+}
+
+
+td{
+    vertical-align: top;
+  
+}
+
+
+.Middle{
+    text-align: justify;
+}
+
+
+.Middle h1{
+    display: inline;
+    padding: 10px;
+    padding-left: 10%;
+}
+
+.Middle p{
+    display: inline;
+}
+
+.Languages-Skills{
+    background-color: aliceblue;
+    border-radius: 15px
+}
+
+.Important{
+    padding: 5px;
+    padding-bottom: 10px;
+    background-color: rgb(255, 188, 44);
+    border-radius: 15px;
+}
+
+.Interests{
+    word-wrap: break-word;
+    max-width: 290px;
+}
+
+.Student-Job{
+    word-wrap: break-word;
+    max-width: 290px;
+}
+
+
+strong{
+    font-weight:100%;
+}
+
+small{
+    font-weight:110%;
+    font-size:90%;
+    color:rgb(116, 116, 116)
+}
