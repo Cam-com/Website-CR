@@ -36,3 +36,8 @@ python_process.stderr.on('data', (data) => {
 python_process.on('exit', (code) => {
     console.log('Python process exited with code >{code}');
 });
+
+var CARD = Vocabulary.html.querySelector('#CARD');
+var CARDcontent = Vocabulary.html.querySelector('#CARD p')
+
+CARDcontent.innerHTML = "Voici le texte qui est maintenant affiché dans le paragraphe.<br>L'ancien texte a été supprimé" ; 
