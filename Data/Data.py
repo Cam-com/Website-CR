@@ -1,8 +1,10 @@
 import pandas as pd
 import sys
+import json
+import ast #abstract syntax tree
 
 # Download the Excel file
-file_location = 'Data\HSK_Level_3_(New_HSK).xls'
+file_location = 'Data/HSK_Level_3_(New_HSK).xls'
 
 # Import the Excel file using pandas
 df = pd.read_excel(file_location, sheet_name='HSK Level 3')
@@ -20,16 +22,17 @@ dv = dv[['Order','HSK Level','Sub-Order','Voc','py','Def',0,1,2,3,4,5,6,7,8,9,10
 
 Voc = dv[['Order','HSK Level','Voc','py','Def',0,1,2]]
 
-data_to_pass_back = 'Send this to the node process'
+data_to_pass_back = Voc.sample(1)
 
 # Check if an argument is provided
 if len(sys.argv) > 1:
-    input_data = sys.argv[1]
+    input_data = ast.literal_eval(sys.argv[1])
     
 else:
     input_data = ""
     
-output = data_to_pass_back
-print(output)
+output = input_data
+output.append(data_to_pass_back)
+print(json.dumps(output))
 
 sys.stdout.flush()
