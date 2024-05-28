@@ -28,34 +28,18 @@ Voc = dv[['Order','HSK Level','Voc','py','Def',0,1,2]]
 #PREPARE QUESTION
 
 Array_voc = Voc.sample(1).values
-Word = Array_voc.iloc[2]
 data_to_pass_back = Array_voc.tolist()
 
 
 
 
-#SEND IT TO JAVASCRIPT
-
-# Check if an argument is provided
-#if len(sys.argv) > 1:
-#    input_data = sys.argv[1]
-#    
-#else:
-#    input_data = ""
-    
+#SEND IT TO JAVASCRIPT    
     
 if len(sys.argv) > 1:
     input_data = json.loads(sys.argv[1])
 
 else:
     input_data = ""
-    
-#output = data_to_pass_back
-#print(output)
-
-#output = input_data
-#output['data_returned'] = data_to_pass_back
-#print(json.dumps(output))
 
 output = json.dumps(data_to_pass_back)
 print(output)
