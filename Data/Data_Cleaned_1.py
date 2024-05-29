@@ -26,22 +26,16 @@ Voc = dv[['Order','HSK Level','Voc','py','Def',0,1,2]]
 
 
 #PREPARE QUESTION
-
-Array_voc = Voc.sample(1).values
-data_to_pass_back = Array_voc.tolist()
-
-
-
+Array_voc = Voc.sample(1).values.tolist()
 
 #SEND IT TO JAVASCRIPT    
-    
 if len(sys.argv) > 1:
     input_data = json.loads(sys.argv[1])
 
 else:
     input_data = ""
 
-output = json.dumps(data_to_pass_back)
+output = json.dumps(Array_voc)
 print(output)
 
 

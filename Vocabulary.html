@@ -13,6 +13,7 @@
     <body>
         <script src="https://cdn.tailwindcss.com"></script>
 
+
         <div class="outline">
             <a href="index.html"><p class="t-tl">Home</p></a>
             <a href="CV-Tailwind.html"><p class="t-tr">CV</p></a>
@@ -31,17 +32,25 @@
                     <input type="radio" name="Type" value="pinyin">PinYin
                     <input type="radio" name="Type" value="french">Français
                 </fieldset><br>
-                <input type="submit" name="Draw" value="Draw">
+                
             </form>
-
-
-
-        <!--Then Card-->
-        <div id='CARD' class = 'block justify-center w-1/6 h-1/6 bg-white text-black'>
-            <p>Question</p>
         </div>
 
+
+        <!--DRAW-->
+        <button onclick="fetchData()">
+            Draw
+        </button>
+
+        <!--CARD-->
+        <div class = 'block justify-center w-60 h-20 bg-white text-black'>
+            <p id="CardContent">Question</p>
+        </div>
+
+        <script src="VOC_Clean_1.js"></script>
             
+
+
         <!--See how Java script will be able to update this page, 
         I have no Idea what I need to write in my html to get a proper result page with 3 Cards
         And a result message based on the Python table
@@ -49,3 +58,4 @@
 
 
     </body>
+</html>
