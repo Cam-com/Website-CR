@@ -8,7 +8,7 @@ const data_to_pass_in = {
     data_returned: undefined
 };
 
-// console.log('Data sent to python script:', data_to_pass_in);
+console.log('Data sent to python script:', data_to_pass_in);
 const python_script_path = path.join(__dirname, 'Data', 'Data_Cleaned_1.py');
 
 
@@ -19,7 +19,7 @@ const python_script_path = path.join(__dirname, 'Data', 'Data_Cleaned_1.py');
 let returnedData;
 
 //CARD function
-function changeCardContent() {
+function changeCardContent2(returnedData) {
     const paragraph = document.getElementById('CardContent');
     if (returnedData && returnedData.length > 2) {
         paragraph.innerHTML = returnedData[2];
@@ -27,6 +27,11 @@ function changeCardContent() {
     } else {
         paragraph.innerHTML = 'Data not available';
     }
+}
+
+function changeCardContent(returnedData){
+    const paragraph = document.getElementById('CardContent');
+    paragraph.innerHTML = returnedData;
 }
 
 
@@ -40,10 +45,10 @@ function fetchData() {
             const jsonData = JSON.parse(data.toString());
             console.log('Data received from Python script:', jsonData);
 
-            returnedData = jsonData;
+            //returnedData = jsonData;
 
             // Update the card content after receiving the data
-            changeCardContent();
+            //changeCardContent(returnedData);
 
         } catch (error) {
             console.error('Error parsing JSON from Python script:', error);
@@ -63,7 +68,7 @@ function fetchData() {
 }
 
 
-
+fetchData()
 
 
 

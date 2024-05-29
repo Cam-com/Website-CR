@@ -26,7 +26,8 @@ Voc = dv[['Order','HSK Level','Voc','py','Def',0,1,2]]
 
 
 #PREPARE QUESTION
-Array_voc = Voc.sample(1).values.tolist()
+#Array_voc = Voc.sample(1).values.tolist()
+Array_voc = Voc.sample(1)[2]
 
 #SEND IT TO JAVASCRIPT    
 if len(sys.argv) > 1:
